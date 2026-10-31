@@ -54,3 +54,5 @@ Project type: Windows Forms App (C#)<br>
 Target framework: .NET Framework 4.5.2<br>
 LibVLCSharp version: 3.10.2<br>
 VideoLAN LibVLC version: 3.0.24
+<br><br>
+<a href='https://ko-fi.com/K3K81YHJE3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Donate at my ko-fi page' /></a>
