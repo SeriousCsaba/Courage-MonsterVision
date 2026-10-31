@@ -29,9 +29,9 @@ To add episodes you have 3 options:
   <img width="170" height="43" alt="opt1" src="https://github.com/user-attachments/assets/6f6269ba-47d4-43ba-bee3-a3f788292a43" />
 
 - #### Option 2
-  Place FFmpeg into the Episodes folder, and place episode chapters into the English folder.<br>Optionally, you can also place external SRT subtitles into the Subtitles folder, and Hungarian audio tracks in MP3 format into the Hungarian folder.<br>The program will use FFmpeg to merge multiple video files into a single episode.<br>
-Here's an example of what this might look like:<br>
+  Place FFmpeg into the Episodes folder, and place episode chapters into the English folder.<br>Optionally, you can also place external SRT subtitles into the Subtitles folder, and Hungarian audio tracks in MP3 format into the Hungarian folder.<br>The program will use FFmpeg to merge multiple video files into a single episode. Here's an example of what this might look like:<br>
   ```ffmpeg.exe -y -safe 0 -f concat -i English\S01E01.txt -i Hungarian\S01E01.mp3 -i Subtitles\S01E01.srt -map 0:0 -map 0:1 -map 1:0 -map 2:0 -metadata:s:a:1 language=hun -metadata:s:s:0 language=eng -c copy -c:s mov_text S01E01.mp4```
+  <br>TXT files tell FFmpeg which files to merge. If you don't have them, the program will generate them for you. Just make sure you have every chapter in order.
   
   <img width="170" height="254" alt="opt2" src="https://github.com/user-attachments/assets/41b52d6f-a298-4f49-9497-77f1486a42d1" />
 
@@ -46,6 +46,8 @@ Here's an example of what this might look like:<br>
   ```
 > [!TIP]
 > Personally I'm using option 2. I can't give you a link for the source, I can only say it's a release by **QxR**.<br><sub>Also worth mentioning that S01E06 needed remuxing because their resolutions differ.</sub>
+
+Other than the episodes, there are 3 folders you can fill up with special features.<br>These folders are: Commercials, Pilots, Movies.<br>Just drop your videos in there and they will show up in the Special menu.
 
 ## Build info
 Project type: Windows Forms App (C#)<br>
