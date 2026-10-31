@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37507.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterVision.Core", "MonsterVision.Core\MonsterVision.Core.csproj", "{9ED5BD51-0905-4B77-B0DD-B0792798502C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterVision", "MonsterVision\MonsterVision.csproj", "{B3DC1ADA-9862-4D38-8597-1891D2520997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ED5BD51-0905-4B77-B0DD-B0792798502C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED5BD51-0905-4B77-B0DD-B0792798502C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED5BD51-0905-4B77-B0DD-B0792798502C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED5BD51-0905-4B77-B0DD-B0792798502C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DC1ADA-9862-4D38-8597-1891D2520997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DC1ADA-9862-4D38-8597-1891D2520997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DC1ADA-9862-4D38-8597-1891D2520997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DC1ADA-9862-4D38-8597-1891D2520997}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF6F8B4E-F3D2-4321-9B59-670180FE7FC3}
+	EndGlobalSection
+EndGlobal

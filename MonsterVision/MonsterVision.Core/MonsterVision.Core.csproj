@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9ED5BD51-0905-4B77-B0DD-B0792798502C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MonsterVision.Core</RootNamespace>
+    <AssemblyName>MonsterVision.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MonsterVision\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\MonsterVision\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LibVLCSharp, Version=3.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LibVLCSharp.3.10.2\lib\net40\LibVLCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVLCSharp.WinForms, Version=3.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LibVLCSharp.WinForms.3.10.2\lib\net40\LibVLCSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\BufferedControls.cs" />
+    <Compile Include="EpisodeManager\EpisodeInfo.cs" />
+    <Compile Include="EpisodeManager\EpisodeDatabase.cs" />
+    <Compile Include="Panels\Player\PlayerPanel.Logo.cs" />
+    <Compile Include="Panels\InfoBox\FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\InfoBox\FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\InfoBox\FormInfoPilot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\InfoBox\FormInfoPilot.Designer.cs">
+      <DependentUpon>FormInfoPilot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Player\PlayerPanel.LoadingScreen.cs" />
+    <Compile Include="Panels\Player\PlayerPanel.Converter.cs" />
+    <Compile Include="MenuSystem\MenuComponents\MenuCheckbox.cs" />
+    <Compile Include="MenuSystem\MenuComponents\HoverIcon.cs" />
+    <Compile Include="MenuSystem\MenuComponents\MenuButton.cs" />
+    <Compile Include="MenuSystem\MenuComponents\MenuButtonEpisode.cs" />
+    <Compile Include="MenuSystem\MenuComponents\MenuButtonEpisodeSwitcher.cs" />
+    <Compile Include="MenuSystem\MenuComponents\MenuScreen.cs" />
+    <Compile Include="MenuSystem\MenuSystem.cs" />
+    <Compile Include="MenuSystem\MenuSystem.EpisodesMenu.cs" />
+    <Compile Include="MenuSystem\MenuSystem.MainMenu.cs" />
+    <Compile Include="MenuSystem\MenuSystem.PlayMenu.cs" />
+    <Compile Include="MenuSystem\MenuSystem.SearchMenu.cs" />
+    <Compile Include="MenuSystem\MenuSystem.SettingsMenu.cs" />
+    <Compile Include="MenuSystem\MenuSystem.SpecialMenu.cs" />
+    <Compile Include="Panels\PlayerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\PlayerPanel.Designer.cs">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Folder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\RNG.cs" />
+    <Compile Include="Helpers\WindowScreen.cs" />
+    <Compile Include="Panels\SearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SearchPanel.Designer.cs">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="MenuSystem\MenuComponents\GraphicsExtensions.cs" />
+    <Compile Include="Panels\SpecialPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SpecialPanel.Designer.cs">
+      <DependentUpon>SpecialPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\InfoBox\FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\InfoBox\FormInfoPilot.resx">
+      <DependentUpon>FormInfoPilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\PlayerPanel.resx">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Panels\SearchPanel.resx">
+      <DependentUpon>SearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SpecialPanel.resx">
+      <DependentUpon>SpecialPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_episodes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_episodes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_bar_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_bar_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_bar_mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_bar_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_chapter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_button_sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_speaker_mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes1_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes1_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes2_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season1_episodes2_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes1_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes1_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes2_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season2_episodes2_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes1_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes1_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes2_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season3_episodes2_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes1_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes1_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes2_thumbnails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\season4_episodes2_thumbnails2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bat8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_bone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_skull1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select_skull2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_eng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_hun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_special1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_special2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\VideoLAN.LibVLC.Windows.3.0.24\build\VideoLAN.LibVLC.Windows.targets" Condition="Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.24\build\VideoLAN.LibVLC.Windows.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.24\build\VideoLAN.LibVLC.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\VideoLAN.LibVLC.Windows.3.0.24\build\VideoLAN.LibVLC.Windows.targets'))" />
+  </Target>
+</Project>
