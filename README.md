@@ -1,5 +1,5 @@
 # MonsterVision
-A Windows program for watching Courage the Cowardly Dog episodes. Episodes not included.
+A Windows program for watching Courage the Cowardly Dog episodes. Episodes NOT included.
 
 <img width="320" height="249" alt="MonsterVision" src="https://github.com/user-attachments/assets/3f08a5f3-0661-46eb-8938-3351a73e3447" />
 
@@ -15,10 +15,10 @@ A Windows program for watching Courage the Cowardly Dog episodes. Episodes not i
 
 
 ### The Menu
-Design inspired by the Hall of Fame DVD release of the first season.
+Design inspired by the Hall of Fame DVD release of the first season. Double click an empty area to make it fullscreen.
 
 ### The Video Player
-Uses a VLC library to play videos. Design inspired by the TV from the show.
+Design inspired by the TV from the show. Uses a VLC library to play videos. Most common VLC keyboard shortcuts work.
 
 ## Setup
 To add episodes you have 3 options:
@@ -26,10 +26,14 @@ To add episodes you have 3 options:
 - #### Option 1
   Put episodes into the Episodes folder. Each episode must contain both 10 minute long chapters in one file. File type can be anything that VLC can play but you must rename extension to MP4.
 
+  <img width="170" height="43" alt="opt1" src="https://github.com/user-attachments/assets/6f6269ba-47d4-43ba-bee3-a3f788292a43" />
+
 - #### Option 2
-  Place FFmpeg into the Episodes folder, and place episode chapters into the English folder. Optionally, you can also place external SRT subtitles into the Subtitles folder, and Hungarian audio tracks in MP3 format into the Hungarian folder. The program will use FFmpeg to merge multiple video files into a single episode.<br>
-Here's an example of what might be ran by the program:<br>
+  Place FFmpeg into the Episodes folder, and place episode chapters into the English folder.<br>Optionally, you can also place external SRT subtitles into the Subtitles folder, and Hungarian audio tracks in MP3 format into the Hungarian folder.<br>The program will use FFmpeg to merge multiple video files into a single episode.<br>
+Here's an example of what this might look like:<br>
   ```ffmpeg.exe -y -safe 0 -f concat -i English\S01E01.txt -i Hungarian\S01E01.mp3 -i Subtitles\S01E01.srt -map 0:0 -map 0:1 -map 1:0 -map 2:0 -metadata:s:a:1 language=hun -metadata:s:s:0 language=eng -c copy -c:s mov_text S01E01.mp4```
+  
+  <img width="170" height="254" alt="opt2" src="https://github.com/user-attachments/assets/41b52d6f-a298-4f49-9497-77f1486a42d1" />
 
 - #### Option 3
   If the above FFmpeg command isn't optimal for you, place a CONVERT.bat file into the Episodes folder and write a script the way you prefer.<br>For example something like this:
